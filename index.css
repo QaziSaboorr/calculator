@@ -18,11 +18,11 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    /* color: white; */
-    /* background-color: black; */
+  
     border-radius: 20px;
-    
+    white-space: initial;
     padding : 10px;
+    overflow-wrap: break-word;
 }
 
 .borderrr {
@@ -93,6 +93,7 @@ footer{
     width: 75%;
     margin-top: 20px;
     font-size: x-large;
+
 }
 
 
@@ -147,8 +148,10 @@ footer{
     /* color: white; */
     /* background-color: black; */
     border-radius: 20px;
-    
+ 
     padding : 10px;
+
+    overflow-wrap: break-word;
 
  }
  

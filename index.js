@@ -170,10 +170,21 @@ function evaluate() {
     inputDisplay.push(" ");
     inputDisplay.push("=");
     inputDisplay.push(" ");
-    inputDisplay.push(eval(inputArray.join("")));
-    textbar.innerHTML = inputDisplay.join("");
-    inputArray = [];
-    inputDisplay = [];
+    let answer = eval(inputArray.join(""));
+
+    if (answer == "Infinity" || answer == "NaN") {
+      inputDisplay.push("Undefined");
+      textbar.innerHTML = inputDisplay.join("");
+      inputArray = [];
+      inputDisplay = [];
+    } else {
+      inputDisplay.push(eval(inputArray.join("")));
+      textbar.innerHTML = inputDisplay.join("");
+      inputArray = [];
+      inputDisplay = [];
+      inputArray.push(answer);
+      inputDisplay.push(answer);
+    }
   } catch (error) {
     alert("Invalid expression");
     textbar.innerHTML = "";
